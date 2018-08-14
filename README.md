@@ -14,10 +14,11 @@ local offline webapps. community intranet!
   - Etcher is a great tool https://etcher.io/
   - If on linux you can use dd:
     - df -h to find drive (/dev/sda, /dev/sdb, /dev/sdc, /dev/mmcblk1p
-    - unmount the drives
-    - sudo dd bs=4 if=your_img_name of=/dev/your_drive_name
+    - sudo umount /dev/sdX1 (for each of the numbered drives, where X is the letter of the drive)
+    - sudo dd bs=4 if=your_img_name of=/dev/sdX conv=fsync
 
 ## Update and Install Required Packages
+- Boot the sd card in the pi. Default login is user:pi, pass:raspberry
 - sudo apt-get update
 - sudo apt-get upgrade
 - sudo apt-get install dnsmasq hostapd
