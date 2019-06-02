@@ -20,6 +20,7 @@ local offline webapps. community intranet!
   - Setup wifi to be able to ssh into the pi immediately
     - Add file named wpa_supplicant.conf to the boot partition with the following contents (inserting your network info)
       ```
+      country=US
       ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
       network={
           ssid="YOUR_NETWORK_NAME"
